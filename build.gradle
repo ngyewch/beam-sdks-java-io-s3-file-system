@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'ca.cutterslade.gradle:gradle-dependency-analyze:1.2.1'
+    }
+}
+
+plugins {
+    id 'com.github.ben-manes.versions' version '0.17.0'
+}
+
+apply plugin: 'java'
+apply plugin: 'ca.cutterslade.analyze'
+apply plugin: 'com.github.ben-manes.versions'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile 'com.amazonaws:aws-java-sdk-core:1.11.223'
+    compile 'com.amazonaws:aws-java-sdk-s3:1.11.223'
+    compile 'com.google.code.findbugs:jsr305:3.0.2'
+    compile 'com.google.guava:guava:23.3-jre'
+    compile 'commons-io:commons-io:2.6'
+    compile 'org.apache.beam:beam-sdks-java-core:2.1.0'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'org.springframework:spring-core:5.0.1.RELEASE'
+}
+
+repositories {
+    jcenter()
+}
+
+
